@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "scripts": {
     "lint": "eslint src/js --ext .js",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test:e2e": "cypress run",
+    "build": "rm -rf dist && mkdir dist && cp index.html dist/ && cp -r src/css dist/css && cp -r src/js dist/js"
   },
   "devDependencies": {
     "eslint": "^8.0.0",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "cypress": "^12.0.0"
   }
 }
